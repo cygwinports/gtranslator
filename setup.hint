@@ -1,0 +1,5 @@
+category: Devel Gnome
+requires: cygwin gtkspell libgnomeui2 gettext
+sdesc: "GNOME gettext po-file editor"
+ldesc: "gtranslator is a highly advanced gettext po files
+editor for the GNOME platform."

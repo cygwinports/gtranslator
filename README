@@ -1,0 +1,226 @@
+gtranslator
+-------------------------------------------
+gtranslator is a highly advanced gettext po files 
+editor for the GNOME platform.
+
+Runtime requirements:
+  cygwin-1.5.18-1
+  GConf2-2.8.1-1
+  ORBit2-2.12.3-1
+  atk-runtime-1.9.1-1
+  expat-1.95.8-1
+  glib2-runtime-2.6.5-1
+  gnome-keyring-0.4.3-1
+  gnome-vfs2-2.8.4-1
+  gtk2-x11-runtime-2.6.8-1
+  gtkspell-2.0.11-1
+  libXft2-2.1.6-1
+  libart_lgpl2-2.3.16-1
+  libaspell15-0.50.3-1
+  libaudiofile0-0.2.6-2
+  libbonobo20-2.8.0-1
+  libbonoboui2-2.8.0-1
+  libesound0-0.2.36-1
+  libfontconfig1-2.2.2-1
+  libfreetype26-2.1.9-1
+  libgnome2-2.8.0-1
+  libgnomecanvas2-2.10.2-1
+  libgnomeui2-2.8.1-1
+  libiconv2-1.9.2-1
+  libintl3-0.14.1-1
+  libjpeg62-6b-11
+  libpopt0-1.6.4-4
+  libxml2-2.6.20-3
+  minires-1.00-1
+  pango-runtime-1.8.1-1
+  xorg-x11-bin-dlls-6.8.2.0-1
+  zlib-1.2.3-1
+
+Build requirements:
+  cygwin-1.5.18-1
+  autoconf2.5-2.59-3
+  automake1.9-1.9.6-1
+  binutils-20050610-1
+  gawk-3.1.5-1
+  gcc-core-3.4.4-1
+  intltool-0.33-1
+  make-3.80-1
+  perl-5.8.7-4
+  pkgconfig-0.17.2-2
+  scrollkeeper-0.3.14-2
+  sed-4.1.4-1
+
+  GConf2-2.8.1-1
+  ORBit2-devel-2.12.3-1
+  atk-devel-1.9.1-1
+  expat-1.95.8-1
+  gettext-0.14.1-1
+  glib2-devel-2.6.5-1
+  gnome-keyring-0.4.3-1
+  gnome-vfs2-2.8.4-1
+  gtk2-x11-devel-2.6.8-1
+  jpeg-6b-11
+  libXft-devel-2.1.6-1
+  libart_lgpl2-2.3.16-1
+  libaudiofile-devel-0.2.6-2
+  libbonobo2-devel-2.8.0-1
+  libbonoboui2-2.8.0-1
+  libesound-devel-0.2.36-1
+  libfontconfig-devel-2.2.2-1
+  libfreetype2-devel-2.1.9-1
+  libgnome2-2.8.0-1
+  libgnomecanvas2-2.10.2-1
+  libgnomeui2-2.8.1-1
+  libiconv-1.9.2-1
+  libxml2-devel-2.6.20-3
+  minires-devel-1.00-1
+  pango-devel-1.8.1-1
+  popt-1.6.4-4
+  scrollkeeper-0.3.14-2
+  xorg-x11-devel-6.8.2.0-1
+  zlib-1.2.3-1
+
+Canonical homepage:
+  http://gtranslator.sourceforge.net/
+
+Canonical download:
+  ftp://ftp.gnome.org/pub/GNOME/sources/gtranslator/
+  http://prdownloads.sourceforge.net/gtranslator/
+
+-------------------------------------------
+
+Build instructions:
+  unpack gtranslator-1.1.6-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  ./gtranslator-1.1.6-1.sh all
+
+This will create:
+  /usr/src/gtranslator-1.1.6-1-src.tar.bz2
+  /usr/src/gtranslator-1.1.6-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/gtranslator.sh
+  /usr/bin/gtranslator.exe
+  /usr/bin/pozilla.sh
+  /usr/share/applications/gtranslator.desktop
+  /usr/share/doc/Cygwin/gtranslator-1.1.6.README
+  /usr/share/doc/gtranslator-1.1.6/AUTHORS
+  /usr/share/doc/gtranslator-1.1.6/ChangeLog
+  /usr/share/doc/gtranslator-1.1.6/COPYING
+  /usr/share/doc/gtranslator-1.1.6/HACKING
+  /usr/share/doc/gtranslator-1.1.6/INSTALL
+  /usr/share/doc/gtranslator-1.1.6/NEWS
+  /usr/share/doc/gtranslator-1.1.6/README
+  /usr/share/doc/gtranslator-1.1.6/THANKS
+  /usr/share/doc/gtranslator-1.1.6/TODO
+  /usr/share/gnome/help/gtranslator/C/figures/mainwindow.png
+  /usr/share/gnome/help/gtranslator/C/figures/prefs.png
+  /usr/share/gnome/help/gtranslator/C/figures/toolbar.png
+  /usr/share/gnome/help/gtranslator/C/gtranslator.xml
+  /usr/share/gnome/help/gtranslator/C/legal.xml
+  /usr/share/gtranslator/colorschemes/arek.xml
+  /usr/share/gtranslator/colorschemes/boom-boom.xml
+  /usr/share/gtranslator/colorschemes/clean.xml
+  /usr/share/gtranslator/colorschemes/curlymonster.xml
+  /usr/share/gtranslator/colorschemes/default.xml
+  /usr/share/gtranslator/colorschemes/extremely-kabalak.xml
+  /usr/share/gtranslator/colorschemes/kabalak.xml
+  /usr/share/gtranslator/colorschemes/kbabel.xml
+  /usr/share/gtranslator/colorschemes/menesis.xml
+  /usr/share/gtranslator/colorschemes/mmc.xml
+  /usr/share/gtranslator/colorschemes/nizuu.xml
+  /usr/share/gtranslator/colorschemes/pdmc.xml
+  /usr/share/gtranslator/colorschemes/sepia.xml
+  /usr/share/gtranslator/colorschemes/spiffE.xml
+  /usr/share/gtranslator/colorschemes/thinice.xml
+  /usr/share/gtranslator/colorschemes/toyfactory.xml
+  /usr/share/gtranslator/colorschemes/tuey.xml
+  /usr/share/gtranslator/colorschemes/vim.xml
+  /usr/share/gtranslator/colorschemes/waliays.xml
+  /usr/share/gtranslator/colorschemes/yef.xml
+  /usr/share/gtranslator/colorschemes/zuper.xml
+  /usr/share/gtranslator/dtd/umtf.dtd
+  /usr/share/gtranslator/scripts/build-gtranslator-learn-buffer.sh
+  /usr/share/gtranslator/scripts/cleanup-gtranslator-settings.sh
+  /usr/share/gtranslator/scripts/my-update.sh
+  /usr/share/locale/am/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/az/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/be/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/bs/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/ca/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/cs/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/da/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/de/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/el/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/en_CA/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/en_GB/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/es/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/et/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/eu/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/fa/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/fi/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/fr/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/ga/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/gl/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/hr/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/hu/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/id/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/is/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/it/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/ja/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/ko/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/lt/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/lv/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/nl/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/nn/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/no/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/pa/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/pl/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/pt/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/pt_BR/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/ru/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/sk/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/sq/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/sr/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/sr@Latn/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/sv/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/ta/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/th/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/tk/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/tr/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/uk/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/vi/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/wa/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/zh_CN/LC_MESSAGES/gtranslator.mo
+  /usr/share/locale/zh_TW/LC_MESSAGES/gtranslator.mo
+  /usr/share/man/man1/gtranslator.1.gz
+  /usr/share/man/man1/pozilla.sh.1.gz
+  /usr/share/mime-info/gtranslator.keys
+  /usr/share/mime-info/gtranslator.mime
+  /usr/share/omf/gtranslator/gtranslator-C.omf
+  /usr/share/pixmaps/gnome-application-x-gmo.png
+  /usr/share/pixmaps/gnome-application-x-po.png
+  /usr/share/pixmaps/gtranslator/fuzzy.png
+  /usr/share/pixmaps/gtranslator/fuzzy_small.png
+  /usr/share/pixmaps/gtranslator/untranslated.png
+  /usr/share/pixmaps/gtranslator/untranslated_small.png
+  /usr/share/pixmaps/gtranslator.png
+
+--------------------
+
+Port Notes:
+
+----- version 1.1.6-1 -----
+Version bump.
+
+----- version 1.0.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
