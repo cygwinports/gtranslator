@@ -1,0 +1,31 @@
+--- origsrc/gtranslator-1.9.4/configure.ac	2009-01-24 10:05:34.000000000 -0600
++++ src/gtranslator-1.9.4/configure.ac	2009-02-05 21:44:57.067980100 -0600
+@@ -112,6 +112,9 @@ AC_SUBST(GTRANSLATOR_LIBS)
+ AC_PATH_PROG([GLIB_GENMARSHAL], [glib-genmarshal])
+ AC_PATH_PROG([GLIB_MKENUMS], [glib-mkenums])
+ 
++PLUGIN_LIBTOOL_FLAGS="-module -avoid-version -no-undefined \$(top_builddir)/src/libgtranslator.la"
++AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
++
+ 
+ dnl -------------------------------------------------------------------
+ dnl Whether we use the broken, unsupported gtk+ functions
+--- origsrc/gtranslator-1.9.4/src/Makefile.am	2009-01-18 10:32:53.000000000 -0600
++++ src/gtranslator-1.9.4/src/Makefile.am	2009-02-05 21:40:28.474230100 -0600
+@@ -7,7 +7,7 @@ SUBDIRS = toolbareditor \
+ 	  plugin-system \
+ 	  translation-memory
+ 
+-noinst_LTLIBRARIES = libgtranslator.la
++lib_LTLIBRARIES = libgtranslator.la
+ 
+ INCLUDES = \
+ 	-I$(top_srcdir)						\
+@@ -112,6 +112,7 @@ libgtranslator_la_SOURCES = \
+ 
+ libgtranslator_la_LIBADD = \
+ 	$(GTRANSLATOR_LIBS) \
++	$(GTKSPELL_LIBS) \
+ 	dialogs/libdialogs.la \
+ 	toolbareditor/libtoolbareditor.la \
+ 	plugin-system/libpluginsystem.la \

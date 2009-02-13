@@ -1,0 +1,6 @@
+inherit gnome2
+
+DESCRIPTION="GNOME gettext po-file editor"
+HOMEPAGE="http://gtranslator.sourceforge.net/"
+SRC_URI="mirror://sourceforge/gtranslator/${P}.tar.gz"
+PATCH_URI="1.9.4-plugins-build.patch"
