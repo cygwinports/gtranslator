@@ -1,0 +1,11 @@
+inherit gnome2
+
+DESCRIPTION="GNOME gettext po-file editor"
+HOMEPAGE="http://gtranslator.sourceforge.net/"
+
+PATCH_URI="1.9.5-plugins-build.patch"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+gtranslator_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/${PN}/ usr/share/"
+gtranslator_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
