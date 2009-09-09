@@ -4,41 +4,41 @@ gtranslator is a highly advanced gettext po files
 editor for the GNOME platform.
 
 Runtime requirements:
-  cygwin-1.7.0-45
-  libapr1-1.3.3-4
+  cygwin-1.7.0-60
+  libapr1-1.3.8-2
   libatk1.0_0-1.26.0-1
-  libdb4.6-4.6.21.4-10
+  libdb4.5-4.5.20.2-2
   libgcc1-4.3.2-2
-  libgconf2_4-2.26.0-1
+  libgconf2_4-2.26.2-1
   libgdict1.0_6-2.26.0-1
-  libgdk_pixbuf2.0_0-2.16.0-1
-  libgdl1_0-2.26.0-1
-  libgettextpo0-0.17-10
-  libglib2.0_0-2.20.0-1
-  libgtk2.0_0-2.16.0-1
-  libgtksourceview2.0_0-2.6.0-1
+  libgdk_pixbuf2.0_0-2.16.6-1
+  libgdl1_0-2.26.2-1
+  libgettextpo0-0.17-11
+  libglib2.0_0-2.20.5-1
+  libgtk2.0_0-2.16.6-1
+  libgtksourceview2.0_0-2.6.2-1
   libgtkspell0-2.0.15-10
-  libgucharmap7-2.26.0-1
-  libintl8-0.17-10
-  libpango1.0_0-1.24.0-1
-  libsoup2.4_1-2.26.0-1
-  libxml2-2.7.3-10
-  subversion-1.5.6-2
+  libgucharmap7-2.26.3.1-1
+  libintl8-0.17-11
+  libpango1.0_0-1.24.5-1
+  libsoup2.4_1-2.26.3-1
+  libxml2-2.7.3-11
+  subversion-1.6.5-2
 
 Build requirements:
 (besides corresponding devel packages)
   autoconf2.5-2.63-10
-  automake1.10-1.10.1-10
-  binutils-20080624-2
-  cygport-0.9.6-1
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
+  cygport-0.9.9-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
   gnome-common-2.26.0-1
   gtk-doc-1.11-2
   intltool-0.40.6-1
   make-3.81-2
-  pkg-config-0.23a-2
-  rarian-0.8.1-10
+  pkg-config-0.23b-10
+  rarian-0.8.1-11
   sed-4.1.5-2
 
 Canonical homepage:
@@ -51,265 +51,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gtranslator-1.9.5-1-src.tar.bz2
+  unpack gtranslator-1.9.6-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gtranslator-1.9.5-1.cygport all
+  cygport ./gtranslator-1.9.6-1.cygport all
 
 This will create:
-  /usr/src/gtranslator-1.9.5-1-src.tar.bz2
-  /usr/src/gtranslator-1.9.5-1.tar.bz2
-  /usr/src/gtranslator-devel-1.9.5-1.tar.bz2
+  /usr/src/gtranslator-1.9.6-1-src.tar.bz2
+  /usr/src/gtranslator-1.9.6-1.tar.bz2
+  /usr/src/gtranslator-devel-1.9.6-1.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /etc/gconf/schemas/gtranslator.schemas
-  /etc/postinstall/gtranslator.sh
-  /etc/preremove/gtranslator.sh
-  /usr/bin/cyggtranslator-0.dll
-  /usr/bin/gtranslator.exe
-  /usr/lib/gtranslator/plugins/alternate-language.gtranslator.plugin
-  /usr/lib/gtranslator/plugins/charmap.gtranslator.plugin
-  /usr/lib/gtranslator/plugins/cygalternatelang.dll
-  /usr/lib/gtranslator/plugins/cygcharmap.dll
-  /usr/lib/gtranslator/plugins/cygdict.dll
-  /usr/lib/gtranslator/plugins/cygfullscreen.dll
-  /usr/lib/gtranslator/plugins/cyginsertparams.dll
-  /usr/lib/gtranslator/plugins/cyginserttags.dll
-  /usr/lib/gtranslator/plugins/cygopentran.dll
-  /usr/lib/gtranslator/plugins/cygsourcecodeview.dll
-  /usr/lib/gtranslator/plugins/cygsubversion.dll
-  /usr/lib/gtranslator/plugins/dict.gtranslator.plugin
-  /usr/lib/gtranslator/plugins/fullscreen.gtranslator.plugin
-  /usr/lib/gtranslator/plugins/insert-params.gtranslator.plugin
-  /usr/lib/gtranslator/plugins/insert-tags.gtranslator.plugin
-  /usr/lib/gtranslator/plugins/libalternatelang.la
-  /usr/lib/gtranslator/plugins/libdict.la
-  /usr/lib/gtranslator/plugins/libcharmap.la
-  /usr/lib/gtranslator/plugins/libfullscreen.la
-  /usr/lib/gtranslator/plugins/libinsertparams.la
-  /usr/lib/gtranslator/plugins/libinserttags.la
-  /usr/lib/gtranslator/plugins/libopentran.la
-  /usr/lib/gtranslator/plugins/libsourcecodeview.la
-  /usr/lib/gtranslator/plugins/libsubversion.la
-  /usr/lib/gtranslator/plugins/open-tran.gtranslator.plugin
-  /usr/lib/gtranslator/plugins/source-code-view.gtranslator.plugin
-  /usr/lib/gtranslator/plugins/subversion.gtranslator.plugin
-  /usr/share/applications/gtranslator.desktop
-  /usr/share/doc/gtranslator/AUTHORS
-  /usr/share/doc/gtranslator/COPYING
-  /usr/share/doc/gtranslator/ChangeLog
-  /usr/share/doc/gtranslator/HACKING
-  /usr/share/doc/gtranslator/NEWS
-  /usr/share/doc/gtranslator/README
-  /usr/share/doc/gtranslator/THANKS
-  /usr/share/doc/gtranslator/TODO
-  /usr/share/gnome/help/gtranslator/C/figures/closedialog.png
-  /usr/share/gnome/help/gtranslator/C/figures/mainwindow.png
-  /usr/share/gnome/help/gtranslator/C/figures/prefs-editor.png
-  /usr/share/gnome/help/gtranslator/C/figures/prefs-interface.png
-  /usr/share/gnome/help/gtranslator/C/figures/prefs-tm.png
-  /usr/share/gnome/help/gtranslator/C/figures/prefs.png
-  /usr/share/gnome/help/gtranslator/C/figures/profiles-dialog.png
-  /usr/share/gnome/help/gtranslator/C/figures/profiles.png
-  /usr/share/gnome/help/gtranslator/C/figures/tm.png
-  /usr/share/gnome/help/gtranslator/C/figures/toolbar.png
-  /usr/share/gnome/help/gtranslator/C/gtranslator.xml
-  /usr/share/gnome/help/gtranslator/C/legal.xml
-  /usr/share/gnome/help/gtranslator/de/figures/closedialog.png
-  /usr/share/gnome/help/gtranslator/de/figures/mainwindow.png
-  /usr/share/gnome/help/gtranslator/de/figures/prefs-editor.png
-  /usr/share/gnome/help/gtranslator/de/figures/prefs-interface.png
-  /usr/share/gnome/help/gtranslator/de/figures/prefs-tm.png
-  /usr/share/gnome/help/gtranslator/de/figures/prefs.png
-  /usr/share/gnome/help/gtranslator/de/figures/profiles-dialog.png
-  /usr/share/gnome/help/gtranslator/de/figures/profiles.png
-  /usr/share/gnome/help/gtranslator/de/figures/tm.png
-  /usr/share/gnome/help/gtranslator/de/figures/toolbar.png
-  /usr/share/gnome/help/gtranslator/de/gtranslator.xml
-  /usr/share/gnome/help/gtranslator/es/figures/closedialog.png
-  /usr/share/gnome/help/gtranslator/es/figures/mainwindow.png
-  /usr/share/gnome/help/gtranslator/es/figures/prefs-editor.png
-  /usr/share/gnome/help/gtranslator/es/figures/prefs-interface.png
-  /usr/share/gnome/help/gtranslator/es/figures/prefs-tm.png
-  /usr/share/gnome/help/gtranslator/es/figures/prefs.png
-  /usr/share/gnome/help/gtranslator/es/figures/profiles-dialog.png
-  /usr/share/gnome/help/gtranslator/es/figures/profiles.png
-  /usr/share/gnome/help/gtranslator/es/figures/tm.png
-  /usr/share/gnome/help/gtranslator/es/figures/toolbar.png
-  /usr/share/gnome/help/gtranslator/es/gtranslator.xml
-  /usr/share/gnome/help/gtranslator/th/figures/closedialog.png
-  /usr/share/gnome/help/gtranslator/th/figures/mainwindow.png
-  /usr/share/gnome/help/gtranslator/th/figures/prefs-editor.png
-  /usr/share/gnome/help/gtranslator/th/figures/prefs-interface.png
-  /usr/share/gnome/help/gtranslator/th/figures/prefs-tm.png
-  /usr/share/gnome/help/gtranslator/th/figures/prefs.png
-  /usr/share/gnome/help/gtranslator/th/figures/profiles-dialog.png
-  /usr/share/gnome/help/gtranslator/th/figures/profiles.png
-  /usr/share/gnome/help/gtranslator/th/figures/tm.png
-  /usr/share/gnome/help/gtranslator/th/figures/toolbar.png
-  /usr/share/gnome/help/gtranslator/th/gtranslator.xml
-  /usr/share/gtranslator/comment-dialog.ui
-  /usr/share/gtranslator/dtd/umtf.dtd
-  /usr/share/gtranslator/gtr-toolbar.xml
-  /usr/share/gtranslator/gtranslator-ui.xml
-  /usr/share/gtranslator/header-dialog.ui
-  /usr/share/gtranslator/jump-dialog.ui
-  /usr/share/gtranslator/layout.xml
-  /usr/share/gtranslator/open-tran-dialog.ui
-  /usr/share/gtranslator/po.lang
-  /usr/share/gtranslator/preferences-dialog.ui
-  /usr/share/gtranslator/profile-dialog.ui
-  /usr/share/gtranslator/search-dialog.ui
-  /usr/share/gtranslator/source-code-view-dialog.ui
-  /usr/share/gtranslator/subversion.ui
-  /usr/share/gtranslator/viewer.ui
-  /usr/share/locale/am/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/ar/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/az/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/be/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/bg/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/bs/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/ca/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/cs/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/da/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/de/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/dz/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/el/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/en_CA/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/en_GB/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/es/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/et/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/eu/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/fa/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/fi/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/fr/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/ga/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/gl/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/he/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/hr/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/hu/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/id/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/is/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/it/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/ja/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/ko/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/ku/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/lt/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/lv/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/nb/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/nl/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/nn/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/oc/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/pa/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/pl/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/pt/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/pt_BR/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/ru/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/rw/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/sk/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/sl/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/sq/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/sr/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/sv/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/ta/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/th/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/tk/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/tr/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/uk/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/vi/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/wa/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/zh_CN/LC_MESSAGES/gtranslator.mo
-  /usr/share/locale/zh_TW/LC_MESSAGES/gtranslator.mo
-  /usr/share/man/man1/gtranslator.1.gz
-  /usr/share/omf/gtranslator/gtranslator-C.omf
-  /usr/share/omf/gtranslator/gtranslator-de.omf
-  /usr/share/omf/gtranslator/gtranslator-es.omf
-  /usr/share/omf/gtranslator/gtranslator-th.omf
-  /usr/share/pixmaps/gtranslator.png
-  /usr/share/pixmaps/gtranslator/debian.png
-  /usr/share/pixmaps/gtranslator/gnome.png
-  /usr/share/pixmaps/gtranslator/gtranslator-fuzzy-next.png
-  /usr/share/pixmaps/gtranslator/gtranslator-fuzzy-prev.png
-  /usr/share/pixmaps/gtranslator/gtranslator-fuzzy-untranslated-next.png
-  /usr/share/pixmaps/gtranslator/gtranslator-fuzzy-untranslated-prev.png
-  /usr/share/pixmaps/gtranslator/gtranslator-plugin.png
-  /usr/share/pixmaps/gtranslator/gtranslator-untranslated-next.png
-  /usr/share/pixmaps/gtranslator/gtranslator-untranslated-prev.png
-  /usr/share/pixmaps/gtranslator/gucharmap.ico
-  /usr/share/pixmaps/gtranslator/inkscape.png
-  /usr/share/pixmaps/gtranslator/kde.ico
-  /usr/share/pixmaps/gtranslator/mozilla.png
-  /usr/share/pixmaps/gtranslator/oo-logo.png
-  /usr/share/pixmaps/gtranslator/open-tran.png
-  /usr/share/pixmaps/gtranslator/subversion-icon.png
-  /usr/share/pixmaps/gtranslator/suse.png
-  /usr/share/pixmaps/gtranslator/xfce.png
-
-(gtranslator-devel)
-  /usr/include/gtranslator-2.0/gtranslator/application.h
-  /usr/include/gtranslator-2.0/gtranslator/context.h
-  /usr/include/gtranslator-2.0/gtranslator/debug.h
-  /usr/include/gtranslator-2.0/gtranslator/header.h
-  /usr/include/gtranslator-2.0/gtranslator/io-error-message-area.h
-  /usr/include/gtranslator-2.0/gtranslator/message-area.h
-  /usr/include/gtranslator-2.0/gtranslator/message-table.h
-  /usr/include/gtranslator-2.0/gtranslator/msg.h
-  /usr/include/gtranslator-2.0/gtranslator/notebook.h
-  /usr/include/gtranslator-2.0/gtranslator/plugin.h
-  /usr/include/gtranslator-2.0/gtranslator/po.h
-  /usr/include/gtranslator-2.0/gtranslator/profile.h
-  /usr/include/gtranslator-2.0/gtranslator/statusbar.h
-  /usr/include/gtranslator-2.0/gtranslator/tab.h
-  /usr/include/gtranslator-2.0/gtranslator/translation-memory-ui.h
-  /usr/include/gtranslator-2.0/gtranslator/translation-memory.h
-  /usr/include/gtranslator-2.0/gtranslator/utils.h
-  /usr/include/gtranslator-2.0/gtranslator/view.h
-  /usr/include/gtranslator-2.0/gtranslator/window.h
-  /usr/lib/libgtranslator.dll.a
-  /usr/lib/libgtranslator.la
-  /usr/lib/pkgconfig/gtranslator.pc
-  /usr/share/gtk-doc/html/gtranslator/ExtendedClassDiagram.png
-  /usr/share/gtk-doc/html/gtranslator/SingleClassDiagram.png
-  /usr/share/gtk-doc/html/gtranslator/ch01.html
-  /usr/share/gtk-doc/html/gtranslator/ch01s02.html
-  /usr/share/gtk-doc/html/gtranslator/ch02.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorApplication.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorContextPanel.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorHeader.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorHistoryEntry.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorMessageArea.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorMessageTable.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorMsg.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorNotebook.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorPlugin.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorPo.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorStatusbar.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorTab.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorTranslationMemoryUi.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorView.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-GtranslatorWindow.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-debug.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-io-error-message-area.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-translation-memory.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator-utils.html
-  /usr/share/gtk-doc/html/gtranslator/gtranslator.devhelp
-  /usr/share/gtk-doc/html/gtranslator/gtranslator.devhelp2
-  /usr/share/gtk-doc/html/gtranslator/home.png
-  /usr/share/gtk-doc/html/gtranslator/index.html
-  /usr/share/gtk-doc/html/gtranslator/index.sgml
-  /usr/share/gtk-doc/html/gtranslator/left.png
-  /usr/share/gtk-doc/html/gtranslator/right.png
-  /usr/share/gtk-doc/html/gtranslator/style.css
-  /usr/share/gtk-doc/html/gtranslator/up.png
-
---------------------
-
 Port Notes:
+
+----- version 1.9.6-1 -----
+Version bump.
 
 ----- version 1.9.5-1 -----
 Initial release for Cygwin 1.7.
