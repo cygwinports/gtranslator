@@ -1,0 +1,22 @@
+--- origsrc/gtranslator-1.9.7/plugins/dictionary/dict-panel.c	2009-08-19 15:27:44.000000000 -0500
++++ src/gtranslator-1.9.7/plugins/dictionary/dict-panel.c	2010-01-31 23:51:24.400640200 -0600
+@@ -658,7 +658,7 @@ gtranslator_dict_panel_init (Gtranslator
+     panel->priv->loader = gdict_source_loader_new ();
+ 
+   /* add our data dir inside $HOME to the loader's search paths */
+-  data_dir = gtranslator_utils_get_user_config_dir ();
++  data_dir = gtranslator_dirs_get_user_config_dir ();
+   gdict_source_loader_add_search_path (priv->loader, data_dir);
+   g_free (data_dir);
+ 
+--- origsrc/gtranslator-1.9.7/src/utils.h	2009-08-19 15:22:59.000000000 -0500
++++ src/gtranslator-1.9.7/src/utils.h	2010-01-31 23:51:03.822463200 -0600
+@@ -78,8 +78,6 @@ gtranslator_utils_get_ui_objects (const 
+ 					  const gchar * doc_id,
+ 					  const gchar * file_name);
+ 
+-     gchar *gtranslator_utils_get_user_config_dir (void);
+-
+      gchar *gtranslator_utils_get_current_date (void);
+ 
+      gchar *gtranslator_utils_get_current_time (void);
