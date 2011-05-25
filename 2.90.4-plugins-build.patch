@@ -1,6 +1,6 @@
---- origsrc/gtranslator-1.9.6/configure.ac	2009-08-24 10:40:43.000000000 -0500
-+++ src/gtranslator-1.9.6/configure.ac	2009-09-09 02:47:39.168302100 -0500
-@@ -116,15 +116,30 @@ AC_MSG_CHECKING([for Win32 platform])
+--- origsrc/gtranslator-2.90.4/configure.ac	2011-05-25 15:16:12.063926700 -0500
++++ src/gtranslator-2.90.4/configure.ac	2011-05-25 15:13:31.000000000 -0500
+@@ -117,15 +117,30 @@ AC_MSG_CHECKING([for Win32 platform])
  case "$host" in
    *-*-mingw*|*-*-cygwin*)
      platform_win32=yes
@@ -13,8 +13,8 @@
      ;;
  esac
  AC_MSG_RESULT([$platform_win32])
-+AC_SUBST(GTR_IMPLIB)
  AM_CONDITIONAL(PLATFORM_WIN32, test "$platform_win32" = "yes")
++AC_SUBST(GTR_IMPLIB)
  
 +AC_MSG_CHECKING([for native Win32])
 +case "$host" in
@@ -32,7 +32,7 @@
  
  dnl -----------------------------------
  dnl Plugins libraries compilation flags
-@@ -132,7 +147,7 @@ dnl -----------------------------------
+@@ -133,7 +148,7 @@ dnl -----------------------------------
  # on win32 plugins must be able to resolve all symbols at link time
  # so we create a lib
  if test "$platform_win32" = yes; then
@@ -41,17 +41,21 @@
  else
  	PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"
  fi
---- origsrc/gtranslator-1.9.6/data/gtranslator.pc.in	2009-08-19 15:17:54.000000000 -0500
-+++ src/gtranslator-1.9.6/data/gtranslator.pc.in	2009-09-09 02:45:52.092916000 -0500
-@@ -8,3 +8,4 @@ Description: gtranslator
- Requires: libglade-2.0 gtksourceview-2.0
+--- origsrc/gtranslator-2.90.4/data/gtranslator.pc.in	2011-05-25 15:16:12.092928400 -0500
++++ src/gtranslator-2.90.4/data/gtranslator.pc.in	2011-05-25 15:15:55.880001100 -0500
+@@ -5,6 +5,7 @@ includedir=@includedir@
+ 
+ Name: gtranslator
+ Description: gtranslator
+-Requires: libglade-2.0 gtksourceview-2.0
++Requires: gtk+-3.0 gtksourceview-3.0
  Version: @VERSION@
  Cflags: -I${includedir}/gtranslator-@GTR_API_VERSION@
 +Libs: -L${libdir} @GTR_IMPLIB@
---- origsrc/gtranslator-1.9.6/src/Makefile.am	2009-08-19 15:17:54.000000000 -0500
-+++ src/gtranslator-1.9.6/src/Makefile.am	2009-09-09 02:49:30.428752200 -0500
-@@ -43,7 +43,7 @@ gtranslator_SOURCES = main.c
- gtranslator_LDADD = libgtranslator.la $(GTRANSLATOR_LIBS) $(GTKSPELL_LIBS) $(INTLLIBS)
+--- origsrc/gtranslator-2.90.4/src/Makefile.am	2011-05-25 15:16:12.097928700 -0500
++++ src/gtranslator-2.90.4/src/Makefile.am	2011-05-25 15:13:31.000000000 -0500
+@@ -38,7 +38,7 @@ gtranslator_LDADD =			\
+ 	-lgettextpo
  
  if PLATFORM_WIN32
 -gtranslator_LDFLAGS = -Wl,--export-all-symbols -mwindows -Wl,--out-implib,libgedit-$(GTR_API_VERSION).a
@@ -59,18 +63,18 @@
  else
  gtranslator_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
  endif
-@@ -57,7 +57,7 @@ BUILT_SOURCES =                         
- 	gtranslator-enum-types.h \
- 	gtranslator-enum-types.c
+@@ -51,7 +51,7 @@ BUILT_SOURCES = \
+ 	gtr-enum-types.h \
+ 	gtr-enum-types.c
  
 -if PLATFORM_WIN32
 +if OS_WIN32
  gtranslator-res.o: gtranslator.rc
  	$(WINDRES) -i gtranslator.rc --input-format=rc -o gtranslator-res.o -O coff
  
-@@ -152,6 +152,12 @@ gtranslator-marshal.h: gtranslator-marsh
- gtranslator-marshal.c: gtranslator-marshal.list $(GLIB_GENMARSHAL)
- 	$(AM_V_GEN) $(GLIB_GENMARSHAL) $< --body --header --prefix=gtranslator_marshal > $@
+@@ -156,6 +156,12 @@ gtr-marshal.h: gtr-marshal.list $(GLIB_G
+ gtr-marshal.c: gtr-marshal.list $(GLIB_GENMARSHAL)
+ 	$(AM_V_GEN) $(GLIB_GENMARSHAL) $< --body --header --prefix=gtr_marshal > $@
  
 +if PLATFORM_WIN32
 +install-exec-hook:
@@ -79,5 +83,5 @@
 +endif
 +
  EXTRA_DIST =	\
- 	gtranslator-marshal.list	\
- 	gtranslator-enum-types.h.template	\
+ 	gtr-marshal.list	\
+ 	gtr-enum-types.h.template	\

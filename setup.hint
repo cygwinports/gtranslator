@@ -1,5 +1,5 @@
 category: Devel Gnome
-requires: libatk1.0_0 libgda4.0_4 libgdict1.0_6 libgdk_pixbuf2.0_0 libgdl1_3 libgettextpo0 libglib2.0_0 libgtk2.0_0 libgtksourceview2.0_0 libgtkspell0 libgucharmap7 libintl8 libjson-glib1.0_0 libpango1.0_0 libunique1.0_0 libxml2
+requires: libatk1.0_0 libgda4.0_4 libgdict1.0_6 libgdk_pixbuf2.0_0 libgdl3_1 libgettextpo0 libgirepository1.0_1 libglib2.0_0 libgtk3_0 libgtksourceview3.0_0 libintl8 libjson-glib1.0_0 libpango1.0_0 libpeas1.0_0 libxml2 python python-gi girepository-Gtk3.0 girepository-GtkSource3.0 girepository-Gucharmap2.90
 sdesc: "GNOME gettext po-file editor"
 ldesc: "gtranslator is a highly advanced gettext po files
 editor for the GNOME platform."

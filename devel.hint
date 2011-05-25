@@ -1,5 +1,5 @@
 category: Devel Gnome
-requires: gtranslator libglib2.0-devel libgtk2.0-devel libgtksourceview2.0-devel gettext libxml2-devel
+requires: gtranslator libglib2.0-devel libgtk3-devel libgtksourceview3.0-devel
 external-source: gtranslator
 sdesc: "GNOME gettext po-file editor (plugin development)"
 ldesc: "gtranslator is a highly advanced gettext po files
