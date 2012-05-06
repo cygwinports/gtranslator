@@ -52,29 +52,29 @@
  Version: @VERSION@
  Cflags: -I${includedir}/gtranslator-@GTR_API_VERSION@
 +Libs: -L${libdir} @GTR_IMPLIB@
---- origsrc/gtranslator-2.90.4/src/Makefile.am	2011-05-25 15:16:12.097928700 -0500
-+++ src/gtranslator-2.90.4/src/Makefile.am	2011-05-25 15:13:31.000000000 -0500
-@@ -38,7 +38,7 @@ gtranslator_LDADD =			\
+--- origsrc/gtranslator-2.91.3/src/Makefile.am
++++ src/gtranslator-2.91.3/src/Makefile.am
+@@ -35,7 +35,7 @@ gtranslator_LDADD =			\
  	-lgettextpo
  
  if PLATFORM_WIN32
--gtranslator_LDFLAGS = -Wl,--export-all-symbols -mwindows -Wl,--out-implib,libgedit-$(GTR_API_VERSION).a
+-gtranslator_LDFLAGS = -Wl,--export-all-symbols -mwindows -Wl,--out-implib,libgtranslator-$(GTR_API_VERSION).a
 +gtranslator_LDFLAGS = -Wl,--export-all-symbols -Wl,--out-implib,libgtranslator-$(GTR_API_VERSION).a
  else
  gtranslator_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
  endif
 @@ -51,7 +51,7 @@ BUILT_SOURCES = \
- 	gtr-enum-types.h \
- 	gtr-enum-types.c
+ BUILT_SOURCES_PRIVATE = \
+ 	gtr-resources.c
  
 -if PLATFORM_WIN32
 +if OS_WIN32
  gtranslator-res.o: gtranslator.rc
  	$(WINDRES) -i gtranslator.rc --input-format=rc -o gtranslator-res.o -O coff
  
-@@ -156,6 +156,12 @@ gtr-marshal.h: gtr-marshal.list $(GLIB_G
- gtr-marshal.c: gtr-marshal.list $(GLIB_GENMARSHAL)
- 	$(AM_V_GEN) $(GLIB_GENMARSHAL) $< --body --header --prefix=gtr_marshal > $@
+@@ -178,6 +178,12 @@ gtr-marshal.h: gtr-marshal.list $(GLIB_G
+ gtr-resources.c: gtranslator.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/gtranslator.gresource.xml)
+ 	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source $(srcdir)/gtranslator.gresource.xml
  
 +if PLATFORM_WIN32
 +install-exec-hook:
@@ -82,6 +82,6 @@
 +	$(INSTALL_DATA) libgtranslator-$(GTR_API_VERSION).a $(DESTDIR)$(libdir)
 +endif
 +
- EXTRA_DIST =	\
- 	gtr-marshal.list	\
- 	gtr-enum-types.h.template	\
+ EXTRA_DIST = \
+ 	gtr-marshal.list \
+ 	gtr-enum-types.h.template \

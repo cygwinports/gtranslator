@@ -3,7 +3,7 @@ inherit gnome2
 DESCRIPTION="GNOME gettext po-file editor"
 HOMEPAGE="http://gtranslator.sourceforge.net/"
 
-PATCH_URI="2.90.4-plugins-build.patch
+PATCH_URI="2.91.3-plugins-build.patch
            2.90.4-introspection.patch"
 
 PKG_NAMES="${PN} ${PN}-devel"
