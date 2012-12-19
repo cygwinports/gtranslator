@@ -1,0 +1,46 @@
+--- origsrc/gtranslator-2.91.5/configure.ac	2012-12-19 02:31:32.348177800 -0600
++++ src/gtranslator-2.91.5/configure.ac	2012-12-19 02:50:55.447703300 -0600
+@@ -120,7 +120,7 @@ dnl Check for win32 platform
+ dnl ------------------------
+ AC_MSG_CHECKING([for Win32 platform])
+ case "$host" in
+-  *-*-mingw*|*-*-cygwin*)
++  *-*-mingw*)
+     platform_win32=yes
+     AC_CHECK_TOOL(WINDRES, windres)
+     ;;
+@@ -140,7 +140,7 @@ dnl -----------------------------------
+ if test "$platform_win32" = yes; then
+ 	PLUGIN_LIBTOOL_FLAGS="-module -avoid-version -no-undefined -mwindows -Wl,\$(top_builddir)/src/libgtranslator-\$(GTR_API_VERSION).a"
+ else
+-	PLUGIN_LIBTOOL_FLAGS="-module -avoid-version"
++	PLUGIN_LIBTOOL_FLAGS="-module -avoid-version -no-undefined \$(top_builddir)/src/libgtranslator-private.la"
+ fi
+ AC_SUBST(PLUGIN_LIBTOOL_FLAGS)
+ 
+--- origsrc/gtranslator-2.91.5/data/gtranslator.pc.in	2012-12-19 02:31:32.357178300 -0600
++++ src/gtranslator-2.91.5/data/gtranslator.pc.in	2012-12-19 02:34:09.411161300 -0600
+@@ -8,3 +8,4 @@ Description: gtranslator
+ Requires: libglade-2.0 gtksourceview-2.0
+ Version: @VERSION@
+ Cflags: -I${includedir}/gtranslator-@GTR_API_VERSION@
++Libs: -L${libdir}/gtranslator -lgtranslator-private
+--- origsrc/gtranslator-2.91.5/src/Makefile.am	2012-12-19 02:31:32.361178600 -0600
++++ src/gtranslator-2.91.5/src/Makefile.am	2012-12-19 02:40:34.048161300 -0600
+@@ -26,7 +26,6 @@ bin_PROGRAMS = \
+ gtranslator_SOURCES = main.c
+ 
+ gtranslator_LDADD =			\
+-	libgtranslator.la		\
+ 	libgtranslator-private.la	\
+ 	$(GTRANSLATOR_LIBS)		\
+ 	$(GTKSPELL_LIBS)		\
+@@ -166,7 +165,7 @@ libgtranslator_la_LIBADD = \
+ 
+ libgtranslator_private_la_LIBADD = libgtranslator.la $(GTRANSLATOR_LIBS) $(GETTEXT_LIBS)
+ 
+-libgtranslator_private_la_LDFLAGS = -avoid-version
++libgtranslator_private_la_LDFLAGS = -avoid-version -no-undefined -export-symbols-regex "^[[^_]].*"
+ 
+ gtr-enum-types.h: gtr-enum-types.h.template $(INST_H_FILES) $(GLIB_MKENUMS)
+ 	$(AM_V_GEN) (cd $(srcdir) && $(GLIB_MKENUMS) --template gtr-enum-types.h.template $(INST_H_FILES)) > $@
