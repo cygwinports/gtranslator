@@ -1,8 +1,8 @@
 inherit gnome2 python
 
 NAME="gtranslator"
-VERSION=2.91.5
-RELEASE=2
+VERSION=2.91.6
+RELEASE=1
 CATEGORY="Devel GNOME"
 SUMMARY="GNOME gettext po-file editor"
 DESCRIPTION="gtranslator is a highly advanced gettext po files
@@ -13,7 +13,6 @@ HOMEPAGE="http://gtranslator.sourceforge.net/"
 PATCH_URI="
 	2.91.5-plugins-build.patch
 	2.90.4-introspection.patch
-	2.91.5-gdl36.patch
 	2.91.5-pc-deps.patch
 "
 
