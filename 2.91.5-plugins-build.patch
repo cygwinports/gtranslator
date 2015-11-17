@@ -35,9 +35,12 @@
  	libgtranslator-private.la	\
  	$(GTRANSLATOR_LIBS)		\
  	$(GTKSPELL_LIBS)		\
-@@ -166,7 +165,7 @@ libgtranslator_la_LIBADD = \
+@@ -164,9 +163,9 @@ libgtranslator_la_LIBADD = \
+ 	toolbareditor/libtoolbareditor.la \
+ 	$(GTRANSLATOR_LIBS)
  
- libgtranslator_private_la_LIBADD = libgtranslator.la $(GTRANSLATOR_LIBS) $(GETTEXT_LIBS)
+-libgtranslator_private_la_LIBADD = libgtranslator.la $(GTRANSLATOR_LIBS) $(GETTEXT_LIBS)
++libgtranslator_private_la_LIBADD = libgtranslator.la $(GTRANSLATOR_LIBS) $(GTKSPELL_LIBS) $(GETTEXT_LIBS)
  
 -libgtranslator_private_la_LDFLAGS = -avoid-version
 +libgtranslator_private_la_LDFLAGS = -avoid-version -no-undefined -export-symbols-regex "^[[^_]].*"

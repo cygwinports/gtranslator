@@ -1,8 +1,8 @@
 inherit gnome2 python
 
 NAME="gtranslator"
-VERSION=2.91.6
-RELEASE=3
+VERSION=2.91.7
+RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GNOME gettext po-file editor"
 DESCRIPTION="gtranslator is a highly advanced gettext po files
@@ -16,7 +16,7 @@ PATCH_URI="
 "
 
 PKG_NAMES="${NAME} ${NAME}-devel"
-gtranslator_REQUIRES="girepository-Gtk3.0 girepository-GtkSource3.0 girepository-Gucharmap2.90"
+gtranslator_REQUIRES="girepository-Gucharmap2.90"
 gtranslator_CONTENTS="--exclude=gtk-doc --exclude=*.dll.a etc/ usr/bin/ usr/lib/${PN}/ usr/share/"
 gtranslator_devel_CONTENTS="usr/include/ usr/lib/${NAME}/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
 
