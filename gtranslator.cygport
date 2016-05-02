@@ -2,7 +2,7 @@ inherit gnome2 python
 
 NAME="gtranslator"
 VERSION=2.91.7
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel"
 SUMMARY="GNOME gettext po-file editor"
 DESCRIPTION="gtranslator is a highly advanced gettext po files
